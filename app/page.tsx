@@ -1,91 +1,83 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
+import { Inter } from '@next/font/google';
+import styles from './page.module.css';
+import {
+  AcademicCapIcon,
+  GlobeAltIcon,
+  BriefcaseIcon,
+  DocumentIcon,
+} from '@heroicons/react/24/solid';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <div className="shadow mt-5 p-5 rounded-md mb-auto mx-auto max-w-7xl w-3/4 flex flex-col space-y-10 bg-white">
+      <h1 className="text-5xl font-normal text-black tracking-widest text-center">
+        GET STARTED
+      </h1>
+
+      <div className="w-full">
+        <label className="block mb-2 text-lg font-bold text-gray-900">
+          What is your citizenship ?
+        </label>
+        <select
+          id="countries"
+          className="bg-gray-50 border border-gray-300 text-black text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-5"
+        >
+          <option>United States</option>
+          <option>Canada</option>
+          <option>France</option>
+          <option>Germany</option>
+        </select>
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+      <div className="flex items-center mb-4">
+        <input
+          id="checkbox-1"
+          type="checkbox"
+          value=""
+          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500  focus:ring"
         />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
+        <label className="ml-2 text-lg text-black">
+          I have more than one citizenship
+        </label>
+      </div>
+
+      <p className="text-black text-lg font-bold">
+        Select reason(s) for travel to Egypt:
+      </p>
+
+      <div className="text-black flex flex-col lg:flex-row justify-around items-center w-full space-y-2 md:space-x-2">
+        <div className="w-full flex flex-col items-center justify-center space-y-2 p-10 border bg-slate-800 text-white rounded-md hover:scale-105 transition duration-200 ease-out cursor-pointer">
+          <DocumentIcon className="h-20 w-20" />
+
+          <h2 className="font-semibold text-lg">Tourism</h2>
+        </div>
+        <div className="w-full flex flex-col items-center justify-center space-y-2 p-10 border bg-slate-800 text-white rounded-md hover:scale-105 transition duration-200 ease-out cursor-pointer">
+          <BriefcaseIcon className="h-20 w-20" />
+
+          <h2 className="font-semibold text-lg">Business</h2>
+        </div>
+        <div className="w-full flex flex-col items-center justify-center space-y-2 p-10 border bg-slate-800 text-white rounded-md hover:scale-105 transition duration-200 ease-out cursor-pointer">
+          <GlobeAltIcon className="h-20 w-20" />
+
+          <h2 className="font-semibold text-lg">Transit</h2>
+        </div>
+        <div className="w-full flex flex-col items-center justify-center space-y-2 p-10 border bg-slate-800 text-white rounded-md hover:scale-105 transition duration-200 ease-out cursor-pointer">
+          <AcademicCapIcon className="h-20 w-20" />
+
+          <h2 className="font-semibold text-lg">Study</h2>
         </div>
       </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+      <div className="w-full text-center">
+        <button
+          type="button"
+          className="uppercase w-1/2 px-5 py-3 text-base font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
         >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          Continue
+        </button>
       </div>
-    </main>
-  )
+    </div>
+  );
 }
