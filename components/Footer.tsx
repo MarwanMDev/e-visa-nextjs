@@ -5,7 +5,7 @@ import { CheckBadgeIcon } from '@heroicons/react/24/solid';
 
 function Footer() {
   return (
-    <footer className="p-2 h-80 rounded-lg shadow-lg flex flex-col items-center justify-center gap-1 bg-slate-900">
+    <footer className="p-2 h-80 rounded-lg shadow-lg flex flex-col items-center justify-center gap-1 bg-slate-900 mt-5">
       <div>
         <Link href="/">
           <Image

@@ -1,12 +1,14 @@
 import { FormWrapper } from './FormWrapper';
+import DatePicker from 'react-datepicker';
 
+import 'react-datepicker/dist/react-datepicker.css';
 type ApplicantInfoData = {
   email: string;
   firstName: string;
   lastName: string;
   fullName: string;
   gender: string;
-  dob: string;
+  dob: Date;
   maritalStatus: string;
   cityOfBirth: string;
   countryOfBirth: string;
@@ -93,7 +95,7 @@ export function ApplicantInfo({
             }
             id="lastName"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            placeholder="Doe"
+            placeholder="FAMILY NAME(S)"
             required
           />
         </div>
@@ -112,7 +114,7 @@ export function ApplicantInfo({
           onChange={(e) => updateFields({ fullName: e.target.value })}
           id="fullName"
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-          placeholder="Doe"
+          placeholder="Full Name In Native Alphabet"
           required
         />
       </div>
@@ -125,15 +127,17 @@ export function ApplicantInfo({
             Gender
             <span className="text-red-400">*</span>
           </label>
-          <input
-            type="text"
+          <select
             value={gender}
             onChange={(e) => updateFields({ gender: e.target.value })}
             id="gender"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            placeholder="Gender"
             required
-          />
+            className="bg-gray-50 border text-sm border-gray-300 text-black rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          >
+            <option selected>Choose a gender</option>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
         </div>
         <div>
           <label
@@ -143,17 +147,22 @@ export function ApplicantInfo({
             Marital Status
             <span className="text-red-400">*</span>
           </label>
-          <input
-            type="text"
+          <select
             value={maritalStatus}
             onChange={(e) =>
               updateFields({ maritalStatus: e.target.value })
             }
             id="maritalStatus"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            placeholder="maritalStatus"
             required
-          />
+            className="bg-gray-50 border text-sm border-gray-300 text-black rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          >
+            <option selected>Choose a marital status</option>
+            <option>Single</option>
+            <option>Married</option>
+            <option>Divorced</option>
+            <option>Legally Separated</option>
+            <option>Other</option>
+          </select>
         </div>
         <div>
           <label
@@ -163,14 +172,10 @@ export function ApplicantInfo({
             Date of Birth
             <span className="text-red-400">*</span>
           </label>
-          <input
-            type="text"
-            value={dob}
-            onChange={(e) => updateFields({ dob: e.target.value })}
-            id="dob"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            placeholder="dob"
-            required
+          <DatePicker
+            className="bg-white text-black w-full p-2.5 text-sm rounded-lg"
+            selected={dob}
+            onChange={(date) => console.log(date)}
           />
         </div>
         <div>
@@ -189,7 +194,7 @@ export function ApplicantInfo({
             }
             id="cityOfBirth"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            placeholder="cityOfBirth"
+            placeholder="City Of Birth"
             required
           />
         </div>
@@ -202,17 +207,22 @@ export function ApplicantInfo({
           Country Of Birth
           <span className="text-red-400">*</span>
         </label>
-        <input
+
+        <select
           value={countryOfBirth}
           onChange={(e) =>
             updateFields({ countryOfBirth: e.target.value })
           }
-          type="text"
           id="countryOfBirth"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-          placeholder="United States"
           required
-        />
+          className="bg-gray-50 border text-sm border-gray-300 text-black rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        >
+          <option selected>Select Country</option>
+          <option>United States</option>
+          <option>Canada</option>
+          <option>France</option>
+          <option>Germany</option>
+        </select>
       </div>
     </FormWrapper>
   );

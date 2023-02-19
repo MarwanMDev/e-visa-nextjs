@@ -17,7 +17,7 @@ type FormData = {
   fullName: string;
   gender: string;
   maritalStatus: string;
-  dob: string;
+  dob: Date;
   cityOfBirth: string;
   countryOfBirth: string;
 };
@@ -29,7 +29,7 @@ const INITIAL_DATA: FormData = {
   fullName: '',
   gender: '',
   maritalStatus: '',
-  dob: '',
+  dob: new Date(),
   cityOfBirth: '',
   countryOfBirth: '',
 };
