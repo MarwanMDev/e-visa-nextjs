@@ -19,7 +19,7 @@ const Header = () => {
       </div>
 
       <div className="hidden xl:inline-flex flex-row justify-center items-center space-x-2">
-        <h2 className="text-2xl">
+        <h2 className="text-4xl">
           Join More Than 95,000+ Satisfied Travelers
         </h2>
         <div className="flex">
@@ -30,12 +30,12 @@ const Header = () => {
       </div>
       <div className="flex flex-row space-x-5 items-center justify-center">
         <div>
-          <h2 className="text-md">English</h2>
+          <h2 className="text-xl">English</h2>
         </div>
 
         <Link
           href="/"
-          className="px-5 py-3 text-sm md:text-lg bg-gray-200 text-black flex items-center rounded-md text-center font-medium"
+          className="px-5 py-3 text-sm md:text-xl bg-gray-200 text-black flex items-center rounded-md text-center font-medium"
         >
           Live Help
         </Link>
