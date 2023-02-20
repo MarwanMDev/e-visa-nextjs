@@ -1,18 +1,18 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import logo from '../public/eVisa.png';
+import logo from '../public/eVisaWhite.png';
 import { CheckBadgeIcon } from '@heroicons/react/24/solid';
 
 function Footer() {
   return (
-    <footer className="p-2 h-80 rounded-lg shadow-lg flex flex-col items-center justify-center gap-1 bg-slate-900 mt-5">
+    <footer className="p-2 h-80 border-t border-gray-200 flex flex-col items-center justify-center gap-1 bg-[#013068] mt-5">
       <div>
         <Link href="/">
           <Image
             className="rounded-full"
             src={logo}
-            width={250}
-            height={250}
+            width={360}
+            height={360}
             alt="logo"
           />
         </Link>

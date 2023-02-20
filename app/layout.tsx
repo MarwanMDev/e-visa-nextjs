@@ -14,7 +14,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className="mx-auto bg-slate-800 flex flex-col min-h-screen">
+      <body className="mx-auto bg-[#013068] flex flex-col min-h-screen">
         <Header />
         {children}
         <Footer />
