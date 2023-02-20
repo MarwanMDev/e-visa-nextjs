@@ -33,13 +33,13 @@ export function ApplicantInfo({
 }: ApplicantInfoFormProps) {
   return (
     <FormWrapper title="Applicant Information">
-      <h2 className="text-3xl text-[#2c3072] font-bold mb-4">
+      <h2 className="text-lg sm:text-2xl lg:text-3xl text-[#2c3072] font-bold mb-4">
         General Information
       </h2>
-      <div className="mb-6 p-2.5">
+      <div className="mb-6 p-1 md:p-2.5">
         <label
           htmlFor="email"
-          className="flex flex-row items-center mb-2 font-bold text-lg text-[#2c3072] uppercase"
+          className="flex flex-row items-center mb-2 font-bold text-sm md:text-lg text-[#2c3072] uppercase"
         >
           Email address <span className="text-red-400"> * </span>
           <a
@@ -59,11 +59,11 @@ export function ApplicantInfo({
           value={email}
           onChange={(e) => updateFields({ email: e.target.value })}
           id="email"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-[#2c3072] focus:border-[#2c3072] block w-full p-5"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-[#2c3072] focus:border-[#2c3072] block w-full p-2 md:p-5"
           placeholder="Email Address"
           required
         />
-        <p className="text-md text-[#2c3072]/70 font-light w-full tracking-wider mt-1">
+        <p className="text-xs sm:text-base text-justify text-[#2c3072]/70 font-light w-full tracking-wider mt-1">
           Email Address Please make sure you enter a valid email
           address. We will use it to contact you about your
           application.
@@ -71,14 +71,14 @@ export function ApplicantInfo({
       </div>
       <hr className="mb-8" />
 
-      <h2 className="text-3xl text-[#2c3072] font-bold mb-4">
+      <h2 className="text-lg sm:text-2xl lg:text-3xl text-[#2c3072] font-bold mb-4">
         Applicant Information
       </h2>
       <div className="grid gap-6 mb-6 md:grid-cols-2 p-2.5">
         <div>
           <label
             htmlFor="firstName"
-            className="block mb-2 font-bold text-lg text-[#2c3072] uppercase"
+            className="block mb-2 font-bold text-sm md:text-lg text-[#2c3072] uppercase"
           >
             FIRST (GIVEN) NAME(S){' '}
             <span className="text-red-400">*</span>
@@ -90,11 +90,11 @@ export function ApplicantInfo({
               updateFields({ firstName: e.target.value })
             }
             id="firstName"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-5"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5"
             placeholder="FIRST (GIVEN) NAME(S)"
             required
           />
-          <p className="text-md text-[#2c3072]/70 font-light w-full tracking-wider mt-1 text-justify">
+          <p className="text-xs sm:text-base text-[#2c3072]/70 font-light w-full tracking-wider mt-1 text-justify">
             Please make sure the first name(s) are exactly as shown on
             your passport or travel document
           </p>
@@ -102,7 +102,7 @@ export function ApplicantInfo({
         <div>
           <label
             htmlFor="lastName"
-            className="block mb-2 font-bold text-lg text-blue-900 uppercase"
+            className="block mb-2 font-bold text-sm md:text-lg text-blue-900 uppercase"
           >
             FAMILY NAME(S)
             <span className="text-red-400">*</span>
@@ -114,11 +114,11 @@ export function ApplicantInfo({
               updateFields({ lastName: e.target.value })
             }
             id="lastName"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-5"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5"
             placeholder="FAMILY NAME(S)"
             required
           />
-          <p className="text-md text-[#2c3072]/70 font-light w-full tracking-wider mt-1 text-justify">
+          <p className="text-xs sm:text-base text-[#2c3072]/70 font-light w-full tracking-wider mt-1 text-justify">
             Please make sure the family name(s) are exactly as shown
             on your passport or travel document
           </p>
@@ -127,7 +127,7 @@ export function ApplicantInfo({
       <div className="mb-6 p-2.5">
         <label
           htmlFor="fullName"
-          className="block mb-2 font-bold text-lg text-[#2c3072] uppercase"
+          className="block mb-2 font-bold text-sm md:text-lg text-[#2c3072] uppercase"
         >
           FULL NAME IN NATIVE ALPHABET
           <span className="text-red-400">*</span>
@@ -137,7 +137,7 @@ export function ApplicantInfo({
           value={fullName}
           onChange={(e) => updateFields({ fullName: e.target.value })}
           id="fullName"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-5"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5"
           placeholder="Full Name In Native Alphabet"
           required
         />
@@ -145,6 +145,50 @@ export function ApplicantInfo({
       <div className="grid gap-6 mb-6 md:grid-cols-2 p-2.5">
         <div>
           <label
+            htmlFor="gender"
+            className="block mb-2 font-bold text-sm md:text-lg text-blue-900 uppercase"
+          >
+            Gender
+            <span className="text-red-400">*</span>
+          </label>
+          <ul className="items-center w-full text-sm font-medium text-gray-900 bg-transparent sm:flex p-1">
+            <li className="w-full">
+              <div className="flex items-center pl-3">
+                <input
+                  id="horizontal-list-radio-license"
+                  type="radio"
+                  value=""
+                  name="list-radio"
+                  className="w-2 h-2 md:w-6 md:h-6 bg-white"
+                />
+                <label
+                  htmlFor="horizontal-list-radio-license"
+                  className="w-full py-3 ml-2 text-xs md:text-lg font-medium text-[#2c3072]"
+                >
+                  Male
+                </label>
+              </div>
+            </li>
+            <li className="w-full">
+              <div className="flex items-center pl-3">
+                <input
+                  id="horizontal-list-radio-id"
+                  type="radio"
+                  value=""
+                  name="list-radio"
+                  className="w-2 h-2 md:w-6 md:h-6 bg-white"
+                />
+                <label
+                  htmlFor="horizontal-list-radio-id"
+                  className="w-full py-3 ml-2 text-xs md:text-lg font-medium text-[#2c3072]"
+                >
+                  Female
+                </label>
+              </div>
+            </li>
+          </ul>
+
+          {/* <label
             htmlFor="gender"
             className="block mb-2 font-bold text-lg text-blue-900 uppercase"
           >
@@ -161,12 +205,12 @@ export function ApplicantInfo({
             <option selected>Choose a gender</option>
             <option>Male</option>
             <option>Female</option>
-          </select>
+          </select> */}
         </div>
         <div>
           <label
             htmlFor="maritalStatus"
-            className="block mb-2 font-bold text-lg text-blue-900 uppercase"
+            className="block mb-2 font-bold text-sm md:text-lg text-blue-900 uppercase"
           >
             Marital Status
             <span className="text-red-400">*</span>
@@ -178,7 +222,7 @@ export function ApplicantInfo({
             }
             id="maritalStatus"
             required
-            className="bg-gray-50 border text-lg border-gray-300 text-black rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-5"
+            className="bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5"
           >
             <option selected>Choose a marital status</option>
             <option>Single</option>
@@ -191,13 +235,13 @@ export function ApplicantInfo({
         <div>
           <label
             htmlFor="dob"
-            className="block mb-2 font-bold text-lg text-blue-900 uppercase"
+            className="block mb-2 font-bold text-sm md:text-lg text-blue-900 uppercase"
           >
             Date of Birth
             <span className="text-red-400">*</span>
           </label>
           <DatePicker
-            className="bg-white text-black w-full p-5 text-lg rounded-lg"
+            className="bg-white text-black w-full p-2 md:p-5 text-xs md:text-lg"
             selected={dob}
             onChange={(date) => console.log(date)}
           />
@@ -205,7 +249,7 @@ export function ApplicantInfo({
         <div>
           <label
             htmlFor="cityOfBirth"
-            className="block mb-2 font-bold text-lg text-blue-900 uppercase"
+            className="block mb-2 font-bold text-sm md:text-lg text-blue-900 uppercase"
           >
             City of Birth
             <span className="text-red-400">*</span>
@@ -217,16 +261,16 @@ export function ApplicantInfo({
               updateFields({ cityOfBirth: e.target.value })
             }
             id="cityOfBirth"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-5"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5"
             placeholder="City Of Birth"
             required
           />
         </div>
       </div>
-      <div className="mb-6 p-2.5">
+      <div className="p-2.5">
         <label
           htmlFor="countryOfBirth"
-          className="block mb-2 font-bold text-lg text-blue-900 uppercase"
+          className="block mb-2 font-bold text-sm md:text-lg text-blue-900 uppercase"
         >
           Country Of Birth
           <span className="text-red-400">*</span>
@@ -239,7 +283,7 @@ export function ApplicantInfo({
           }
           id="countryOfBirth"
           required
-          className="bg-gray-50 border text-lg border-gray-300 text-black rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-5"
+          className="bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5"
         >
           <option selected>Select Country</option>
           <option>United States</option>
