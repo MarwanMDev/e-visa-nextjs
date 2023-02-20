@@ -1,6 +1,11 @@
 'use client';
 
 import { ApplicantInfo } from '@/components/ApplicantInfo';
+import { ContactInfo } from '@/components/ContactInfo';
+import { EgyptContact } from '@/components/EgyptContact';
+import { PassportInfo } from '@/components/PassportInfo';
+import { SecurityQuestions } from '@/components/SecurityQuestions';
+import { TripDetails } from '@/components/TripDetails';
 import { useMultistepForm } from '@/hooks/useMultistepForm';
 import { CheckBadgeIcon } from '@heroicons/react/24/solid';
 import React, { FormEvent, useState } from 'react';
@@ -56,11 +61,11 @@ function VisaPage({ params: { token } }: Props) {
       {...data}
       updateFields={updateFields}
     />,
-    <ApplicantInfo
-      key="Applicant Information"
-      {...data}
-      updateFields={updateFields}
-    />,
+    <PassportInfo key="Passport Information" />,
+    <ContactInfo key="Contact Information" />,
+    <TripDetails key="Trip Details" />,
+    <EgyptContact key="Egypt Contact" />,
+    <SecurityQuestions key="Security Questions" />,
   ]);
   function onSubmit(e: FormEvent) {
     e.preventDefault();
@@ -94,11 +99,13 @@ function VisaPage({ params: { token } }: Props) {
           is valid for up to 10 years.
         </p> */}
       </div>
-      <div className="hidden lg:flex flex-row ju text-black justify-center gap-3 items-center mt-5">
+      <div className="hidden lg:flex flex-row text-black justify-center gap-3 items-center mt-5">
         {steps.map((step, i) => (
           <div
             key={i}
-            className="p-5 text-center text-md bg-gray-100 max-w-[140px] border-y shadow-md border-y-transparent border-l-8 border-l-[#2c3072]"
+            className={`${
+              i == 0 && 'active'
+            } p-5 text-center text-base bg-gray-100 h-[84px] max-w-[140px] border border-gray-400 border-y shadow-md border-y-transparent active:border-l-8 active:border-l-[#2c3072] cursor-pointer`}
           >
             {step.key}
           </div>

@@ -224,7 +224,9 @@ export function ApplicantInfo({
             required
             className="bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5"
           >
-            <option selected>Choose a marital status</option>
+            <option value="" selected disabled>
+              Choose a marital status
+            </option>
             <option>Single</option>
             <option>Married</option>
             <option>Divorced</option>
@@ -283,9 +285,12 @@ export function ApplicantInfo({
           }
           id="countryOfBirth"
           required
+          placeholder="Select Country"
           className="bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5"
         >
-          <option selected>Select Country</option>
+          <option value="" selected disabled>
+            Select Country
+          </option>
           <option>United States</option>
           <option>Canada</option>
           <option>France</option>
