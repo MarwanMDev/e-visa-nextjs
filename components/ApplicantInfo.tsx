@@ -32,7 +32,7 @@ export function ApplicantInfo({
   updateFields,
 }: ApplicantInfoFormProps) {
   return (
-    <FormWrapper title="Applicant Information">
+    <FormWrapper>
       <h2 className="text-lg sm:text-2xl lg:text-3xl text-[#2c3072] font-bold mb-4">
         General Information
       </h2>
@@ -61,8 +61,8 @@ export function ApplicantInfo({
           id="email"
           className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-[#2c3072] focus:border-[#2c3072] block w-full p-2 md:p-5"
           placeholder="Email Address"
-          required
         />
+
         <p className="text-xs sm:text-base text-justify text-[#2c3072]/70 font-light w-full tracking-wider mt-1">
           Email Address Please make sure you enter a valid email
           address. We will use it to contact you about your

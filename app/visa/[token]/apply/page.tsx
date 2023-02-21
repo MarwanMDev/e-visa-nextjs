@@ -9,6 +9,7 @@ import { TripDetails } from '@/components/TripDetails';
 import { useMultistepForm } from '@/hooks/useMultistepForm';
 import { CheckBadgeIcon } from '@heroicons/react/24/solid';
 import React, { FormEvent, useState } from 'react';
+import { useForm, SubmitHandler } from 'react-hook-form';
 
 type Props = {
   params: {
@@ -61,17 +62,21 @@ function VisaPage({ params: { token } }: Props) {
       {...data}
       updateFields={updateFields}
     />,
-    <PassportInfo key="Passport Information" />,
-    <ContactInfo key="Contact Information" />,
-    <TripDetails key="Trip Details" />,
-    <EgyptContact key="Egypt Contact" />,
-    <SecurityQuestions key="Security Questions" />,
+    // <PassportInfo key="Passport Information" />,
+    // <ContactInfo key="Contact Information" />,
+    // <TripDetails key="Trip Details" />,
+    // <EgyptContact key="Egypt Contact" />,
+    // <SecurityQuestions key="Security Questions" />,
   ]);
+
   function onSubmit(e: FormEvent) {
     e.preventDefault();
+    console.log(data);
     if (!isLastStep) return next();
     alert('Successful Account Creation');
   }
+
+  // };
   return (
     <div className="mb-auto text-white w-full sm:w-[768px] lg:w-[900px] xl:w-[1240px] 2xl:w-[1600px] mx-auto bg-white p-5">
       <div className="flex flex-col justify-center items-center gap-3 text-black">
@@ -123,7 +128,11 @@ function VisaPage({ params: { token } }: Props) {
         {step}
         <div className="m-8">
           {!isFirstStep && (
-            <button type="button" onClick={back}>
+            <button
+              type="button"
+              onClick={back}
+              className="text-white text-sm md:text-lg uppercase font-bold bg-gray-600 p-2 md:p-6 w-[100px] md:w-[200px]"
+            >
               Back
             </button>
           )}
