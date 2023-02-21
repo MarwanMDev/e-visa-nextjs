@@ -1,7 +1,10 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { StarIcon } from '@heroicons/react/24/solid';
 import logo from '../public/eVisa.png';
+import React from 'react';
+import DarkModeButton from './DarkModeButton';
 
 const Header = () => {
   return (
@@ -29,6 +32,9 @@ const Header = () => {
         </div>
       </div>
       <div className="flex flex-row space-x-5 items-center justify-center">
+        <div>
+          <DarkModeButton />
+        </div>
         <div>
           <h2 className="text-xl text-[#2c3072]">English</h2>
         </div>

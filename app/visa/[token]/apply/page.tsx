@@ -64,11 +64,11 @@ function VisaPage({ params: { token } }: Props) {
       {...data}
       updateFields={updateFields}
     />,
-    // <PassportInfo key="Passport Information" />,
-    // <ContactInfo key="Contact Information" />,
-    // <TripDetails key="Trip Details" />,
-    // <EgyptContact key="Egypt Contact" />,
-    // <SecurityQuestions key="Security Questions" />,
+    <PassportInfo key="Passport Information" />,
+    <ContactInfo key="Contact Information" />,
+    <TripDetails key="Trip Details" />,
+    <EgyptContact key="Egypt Contact" />,
+    <SecurityQuestions key="Security Questions" />,
   ]);
 
   function onSubmit(e: FormEvent) {
