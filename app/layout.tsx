@@ -11,13 +11,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <Providers>
-        <body className="mx-auto bg-[#013068] dark:bg-zinc-900 transition-all duration-700 flex flex-col min-h-screen">
+      <body className="mx-auto bg-[#013068] dark:bg-zinc-900 transition-all duration-700 flex flex-col min-h-screen">
+        <Providers>
           <Header />
           {children}
           <Footer />
-        </body>
-      </Providers>
+        </Providers>
+      </body>
     </html>
   );
 }

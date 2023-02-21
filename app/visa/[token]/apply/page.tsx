@@ -80,7 +80,7 @@ function VisaPage({ params: { token } }: Props) {
 
   // };
   return (
-    <div className="mb-auto text-white w-full sm:w-[768px] lg:w-[900px] xl:w-[1240px] 2xl:w-[1600px] mx-auto bg-white p-5">
+    <div className="mb-auto w-full sm:w-[768px] lg:w-[900px] xl:w-[1240px] 2xl:w-[1600px] mx-auto p-5 text-white bg-white dark:bg-slate-400 transition duration-700">
       <div className="flex flex-col justify-center items-center gap-3 text-black">
         <h2 className="mt-10 text-center text-3xl lg:text-4xl xl:text-5xl tracking-widest">
           EGYPT PERMIT AUTHORIZATION

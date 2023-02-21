@@ -1,28 +1,43 @@
 'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { StarIcon } from '@heroicons/react/24/solid';
 import logo from '../public/eVisa.png';
+import logoWhite from '../public/eVisaWhite.png';
 import React from 'react';
 import DarkModeButton from './DarkModeButton';
+import { useTheme } from 'next-themes';
 
 const Header = () => {
+  const { theme } = useTheme();
+
   return (
-    <header className="bg-white mb-2 flex items-center justify-between space-x-2 font-bold px-10 py-5 shadow-lg">
+    <header className="bg-white mb-2 flex items-center justify-between space-x-2 font-bold px-10 py-5 shadow-lg dark:bg-zinc-700 transition-all duration-700">
       <div className="flex items-center space-x-2">
         <Link href="/">
-          <Image
-            className="rounded-full"
-            src={logo}
-            width={360}
-            height={360}
-            alt="logo"
-          />
+          {theme === 'dark' ? (
+            <Image
+              className="rounded-full"
+              src={logoWhite}
+              width={360}
+              height={360}
+              alt="logo"
+            />
+          ) : (
+            <Image
+              className="rounded-full"
+              src={logo}
+              width={360}
+              height={360}
+              alt="logo"
+            />
+          )}
         </Link>
       </div>
 
       <div className="hidden xl:inline-flex flex-row justify-center items-center space-x-2">
-        <h2 className="text-4xl text-[#2c3072]">
+        <h2 className="text-4xl text-[#2c3072] dark:text-white transition duration-100">
           Join More Than 95,000+ Satisfied Travelers
         </h2>
         <div className="flex">
@@ -36,7 +51,9 @@ const Header = () => {
           <DarkModeButton />
         </div>
         <div>
-          <h2 className="text-xl text-[#2c3072]">English</h2>
+          <h2 className="text-xl text-[#2c3072] dark:text-white transition duration-100">
+            English
+          </h2>
         </div>
 
         <Link

@@ -1,19 +1,12 @@
-'use client';
-
-import { Inter } from '@next/font/google';
-import styles from './page.module.css';
 import {
   AcademicCapIcon,
   GlobeAltIcon,
   BriefcaseIcon,
   DocumentIcon,
 } from '@heroicons/react/24/solid';
-import { useRouter } from 'next/navigation';
-
-const inter = Inter({ subsets: ['latin'] });
+import Link from 'next/link';
 
 export default function Home() {
-  const router = useRouter();
   return (
     <div className="shadow mt-5 p-5 rounded-md mb-auto mx-auto max-w-7xl w-3/4 flex flex-col space-y-10 bg-white">
       <h1 className="text-5xl font-normal text-black tracking-widest text-center">
@@ -75,7 +68,7 @@ export default function Home() {
       </div>
 
       <div className="w-full text-center">
-        <button
+        {/* <button
           type="button"
           onClick={() =>
             router.push('visa/PkOvL59xXwh8vX3QK6yp/apply')
@@ -83,7 +76,8 @@ export default function Home() {
           className="uppercase w-1/2 p-5 text-lg font-medium text-center text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300"
         >
           Continue
-        </button>
+        </button> */}
+        <Link href="visa/PkOvL59xXwh8vX3QK6yp/apply">Continue</Link>
       </div>
     </div>
   );
