@@ -8,6 +8,7 @@ import { SecurityQuestions } from '@/components/SecurityQuestions';
 import { TripDetails } from '@/components/TripDetails';
 import { useMultistepForm } from '@/hooks/useMultistepForm';
 import { CheckBadgeIcon } from '@heroicons/react/24/solid';
+import { useRouter } from 'next/navigation';
 import React, { FormEvent, useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
@@ -43,6 +44,7 @@ const INITIAL_DATA: FormData = {
 
 function VisaPage({ params: { token } }: Props) {
   const [data, setData] = useState(INITIAL_DATA);
+  const router = useRouter();
   function updateFields(fields: Partial<FormData>) {
     setData((prev) => {
       return { ...prev, ...fields };
@@ -73,7 +75,7 @@ function VisaPage({ params: { token } }: Props) {
     e.preventDefault();
     console.log(data);
     if (!isLastStep) return next();
-    alert('Successful Account Creation');
+    router.push('visa/PkOvL59xXwh8vX3QK6yp/confirmation');
   }
 
   // };

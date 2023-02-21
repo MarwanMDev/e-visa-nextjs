@@ -61,6 +61,7 @@ export function ApplicantInfo({
           id="email"
           className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-[#2c3072] focus:border-[#2c3072] block w-full p-2 md:p-5"
           placeholder="Email Address"
+          required
         />
 
         <p className="text-xs sm:text-base text-justify text-[#2c3072]/70 font-light w-full tracking-wider mt-1">
@@ -157,7 +158,7 @@ export function ApplicantInfo({
                 <input
                   id="horizontal-list-radio-license"
                   type="radio"
-                  value=""
+                  value={gender}
                   name="list-radio"
                   className="w-2 h-2 md:w-6 md:h-6 bg-white"
                 />
@@ -174,9 +175,9 @@ export function ApplicantInfo({
                 <input
                   id="horizontal-list-radio-id"
                   type="radio"
-                  value=""
+                  value={gender}
                   name="list-radio"
-                  className="w-2 h-2 md:w-6 md:h-6 bg-white"
+                  className="w-2 h-2 md:w-6 md:h-6 bg-white input-[#fff] checked:bg-red"
                 />
                 <label
                   htmlFor="horizontal-list-radio-id"
@@ -224,14 +225,16 @@ export function ApplicantInfo({
             required
             className="bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5"
           >
-            <option value="" selected disabled>
+            <option value="" disabled>
               Choose a marital status
             </option>
-            <option>Single</option>
-            <option>Married</option>
-            <option>Divorced</option>
-            <option>Legally Separated</option>
-            <option>Other</option>
+            <option value="single">Single</option>
+            <option value="married">Married</option>
+            <option value="divorced">Divorced</option>
+            <option value="legally separated">
+              Legally Separated
+            </option>
+            <option value="other">Other</option>
           </select>
         </div>
         <div>
@@ -288,13 +291,13 @@ export function ApplicantInfo({
           placeholder="Select Country"
           className="bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5"
         >
-          <option value="" selected disabled>
+          <option value="" disabled>
             Select Country
           </option>
-          <option>United States</option>
-          <option>Canada</option>
-          <option>France</option>
-          <option>Germany</option>
+          <option value="united states">United States</option>
+          <option value="canada">Canada</option>
+          <option value="france">France</option>
+          <option value="germany">Germany</option>
         </select>
       </div>
     </FormWrapper>
