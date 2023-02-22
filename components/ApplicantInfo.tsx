@@ -33,20 +33,20 @@ export function ApplicantInfo({
 }: ApplicantInfoFormProps) {
   return (
     <FormWrapper>
-      <h2 className="text-lg sm:text-2xl lg:text-3xl text-[#2c3072] font-bold mb-4">
+      <h2 className="text-lg sm:text-2xl lg:text-3xl text-[#2c3072] dark:text-white font-bold mb-4">
         General Information
       </h2>
       <div className="mb-6 p-1 md:p-2.5">
         <label
           htmlFor="email"
-          className="flex flex-row items-center mb-2 font-bold text-sm md:text-lg text-[#2c3072] uppercase"
+          className="flex flex-row items-center mb-2 font-bold text-sm md:text-lg text-[#2c3072] dark:text-white uppercase"
         >
           Email address <span className="text-red-400"> * </span>
           <a
             href="#"
             className="group relative inline-block text-[#2c3072] underline hover:text-red-500 duration-300"
           >
-            <QuestionMarkCircleIcon className="h-6" />
+            <QuestionMarkCircleIcon className="h-6 dark:text-white" />
             <span className="absolute hidden group-hover:flex -left-5 -top-2 -translate-y-full w-48 px-2 py-1 bg-gray-700 rounded-lg text-center text-white text-sm after:content-[''] after:absolute after:left-1/2 after:top-[100%] after:-translate-x-1/2 after:border-8 after:border-x-transparent after:border-b-transparent after:border-t-gray-700">
               Please add a personal email address that you use
               frequantly
@@ -64,7 +64,7 @@ export function ApplicantInfo({
           required
         />
 
-        <p className="text-xs sm:text-base text-justify text-[#2c3072]/70 font-light w-full tracking-wider mt-1">
+        <p className="text-xs sm:text-base text-justify text-[#2c3072]/70 dark:text-gray-400 font-light w-full tracking-wider mt-1">
           Email Address Please make sure you enter a valid email
           address. We will use it to contact you about your
           application.
@@ -72,14 +72,14 @@ export function ApplicantInfo({
       </div>
       <hr className="mb-8" />
 
-      <h2 className="text-lg sm:text-2xl lg:text-3xl text-[#2c3072] font-bold mb-4">
+      <h2 className="text-lg sm:text-2xl lg:text-3xl text-[#2c3072] dark:text-white font-bold mb-4">
         Applicant Information
       </h2>
       <div className="grid gap-6 mb-6 md:grid-cols-2 p-2.5">
         <div>
           <label
             htmlFor="firstName"
-            className="block mb-2 font-bold text-sm md:text-lg text-[#2c3072] uppercase"
+            className="block mb-2 font-bold text-sm md:text-lg text-[#2c3072] dark:text-white uppercase"
           >
             FIRST (GIVEN) NAME(S){' '}
             <span className="text-red-400">*</span>
@@ -95,7 +95,7 @@ export function ApplicantInfo({
             placeholder="FIRST (GIVEN) NAME(S)"
             required
           />
-          <p className="text-xs sm:text-base text-[#2c3072]/70 font-light w-full tracking-wider mt-1 text-justify">
+          <p className="text-xs sm:text-base text-[#2c3072]/70 dark:text-gray-400 font-light w-full tracking-wider mt-1 text-justify">
             Please make sure the first name(s) are exactly as shown on
             your passport or travel document
           </p>
@@ -103,7 +103,7 @@ export function ApplicantInfo({
         <div>
           <label
             htmlFor="lastName"
-            className="block mb-2 font-bold text-sm md:text-lg text-blue-900 uppercase"
+            className="block mb-2 font-bold text-sm md:text-lg text-[#2c3072] dark:text-white uppercase"
           >
             FAMILY NAME(S)
             <span className="text-red-400">*</span>
@@ -119,7 +119,7 @@ export function ApplicantInfo({
             placeholder="FAMILY NAME(S)"
             required
           />
-          <p className="text-xs sm:text-base text-[#2c3072]/70 font-light w-full tracking-wider mt-1 text-justify">
+          <p className="text-xs sm:text-base text-[#2c3072]/70 dark:text-gray-400 font-light w-full tracking-wider mt-1 text-justify">
             Please make sure the family name(s) are exactly as shown
             on your passport or travel document
           </p>
@@ -128,7 +128,7 @@ export function ApplicantInfo({
       <div className="mb-6 p-2.5">
         <label
           htmlFor="fullName"
-          className="block mb-2 font-bold text-sm md:text-lg text-[#2c3072] uppercase"
+          className="block mb-2 font-bold text-sm md:text-lg text-[#2c3072] dark:text-white uppercase"
         >
           FULL NAME IN NATIVE ALPHABET
           <span className="text-red-400">*</span>
@@ -147,7 +147,7 @@ export function ApplicantInfo({
         <div>
           <label
             htmlFor="gender"
-            className="block mb-2 font-bold text-sm md:text-lg text-blue-900 uppercase"
+            className="block mb-2 font-bold text-sm md:text-lg text-[#2c3072] dark:text-white uppercase"
           >
             Gender
             <span className="text-red-400">*</span>
@@ -160,11 +160,11 @@ export function ApplicantInfo({
                   type="radio"
                   value={gender}
                   name="list-radio"
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                 />
                 <label
                   htmlFor="horizontal-list-radio-license"
-                  className="w-full py-3 ml-2 text-xs md:text-lg font-medium text-[#2c3072]"
+                  className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
                   Male
                 </label>
@@ -177,11 +177,11 @@ export function ApplicantInfo({
                   type="radio"
                   value={gender}
                   name="list-radio"
-                  className="w-2 h-2 md:w-6 md:h-6 bg-white input-[#fff] checked:bg-red"
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                 />
                 <label
                   htmlFor="horizontal-list-radio-id"
-                  className="w-full py-3 ml-2 text-xs md:text-lg font-medium text-[#2c3072]"
+                  className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
                   Female
                 </label>
@@ -211,7 +211,7 @@ export function ApplicantInfo({
         <div>
           <label
             htmlFor="maritalStatus"
-            className="block mb-2 font-bold text-sm md:text-lg text-blue-900 uppercase"
+            className="block mb-2 font-bold text-sm md:text-lg text-[#2c3072] dark:text-white uppercase"
           >
             Marital Status
             <span className="text-red-400">*</span>
@@ -240,7 +240,7 @@ export function ApplicantInfo({
         <div>
           <label
             htmlFor="dob"
-            className="block mb-2 font-bold text-sm md:text-lg text-blue-900 uppercase"
+            className="block mb-2 font-bold text-sm md:text-lg text-[#2c3072] dark:text-white uppercase"
           >
             Date of Birth
             <span className="text-red-400">*</span>
@@ -254,7 +254,7 @@ export function ApplicantInfo({
         <div>
           <label
             htmlFor="cityOfBirth"
-            className="block mb-2 font-bold text-sm md:text-lg text-blue-900 uppercase"
+            className="block mb-2 font-bold text-sm md:text-lg text-[#2c3072] dark:text-white uppercase"
           >
             City of Birth
             <span className="text-red-400">*</span>
@@ -275,7 +275,7 @@ export function ApplicantInfo({
       <div className="p-2.5">
         <label
           htmlFor="countryOfBirth"
-          className="block mb-2 font-bold text-sm md:text-lg text-blue-900 uppercase"
+          className="block mb-2 font-bold text-sm md:text-lg text-[#2c3072] dark:text-white uppercase"
         >
           Country Of Birth
           <span className="text-red-400">*</span>

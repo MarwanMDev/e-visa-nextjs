@@ -13,7 +13,7 @@ const Header = () => {
   const { theme } = useTheme();
 
   return (
-    <header className="bg-white mb-2 flex items-center justify-between space-x-2 font-bold px-10 py-5 shadow-lg dark:bg-zinc-700 transition-all duration-700">
+    <header className="bg-white mb-4 flex items-center justify-between space-x-2 font-bold px-10 py-5 shadow-lg dark:bg-zinc-700 transition-all duration-700">
       <div className="flex items-center space-x-2">
         <Link href="/">
           {theme === 'dark' ? (

@@ -80,22 +80,22 @@ function VisaPage({ params: { token } }: Props) {
 
   // };
   return (
-    <div className="mb-auto w-full sm:w-[768px] lg:w-[900px] xl:w-[1240px] 2xl:w-[1600px] mx-auto p-5 text-white bg-white dark:bg-slate-400 transition duration-700">
-      <div className="flex flex-col justify-center items-center gap-3 text-black">
-        <h2 className="mt-10 text-center text-3xl lg:text-4xl xl:text-5xl tracking-widest">
+    <div className="mb-auto w-full sm:w-[768px] lg:w-[900px] xl:w-[1240px] 2xl:w-[1600px] mx-auto p-5 text-white bg-white border border-gray-100 dark:bg-zinc-700 transition-all duration-700">
+      <div className="flex flex-col justify-center items-center gap-3">
+        <h2 className="mt-10 text-center text-3xl lg:text-4xl xl:text-5xl tracking-widest text-black dark:text-white transition-all duration-100">
           EGYPT PERMIT AUTHORIZATION
         </h2>
-        <p className="text-center text-lg md:text-2xl font-thin">
+        <p className="text-center text-lg md:text-2xl font-thin text-black dark:text-white transition-all duration-100">
           Welcome, you are entitled to a Visit Permit to EGYPT.
         </p>
-        <p className="font-bold text-center text-sm md:text-lg">
+        <p className="font-bold text-center text-sm md:text-lg text-black dark:text-white transition-all duration-100">
           If you apply, make sure:
         </p>
-        <p className="flex flex-row justify-center items-center text-sm md:text-lg">
+        <p className="flex flex-row justify-center items-center text-sm md:text-lg text-black dark:text-white transition-all duration-100">
           <CheckBadgeIcon className="h-6 text-green-600" />
           You’re visiting for a maximum of 6 months
         </p>
-        <p className="flex flex-row justify-center items-center text-sm md:text-lg">
+        <p className="flex flex-row justify-center items-center text-sm md:text-lg text-black dark:text-white transition-all duration-100">
           <CheckBadgeIcon className="h-6 text-green-600" />
           You’re traveling exclusively for business, transit or
           pleasure
@@ -112,7 +112,7 @@ function VisaPage({ params: { token } }: Props) {
             key={i}
             className={`${
               i == 0 && 'active'
-            } p-5 text-center text-base bg-gray-100 h-[84px] max-w-[140px] border border-gray-400 border-y shadow-md border-y-transparent active:border-l-8 active:border-l-[#2c3072] cursor-pointer`}
+            } p-5 text-center text-base bg-transparent h-[84px] max-w-[140px] border border-gray-400 text-black dark:text-white cursor-pointer`}
           >
             {step.key}
           </div>
@@ -121,7 +121,7 @@ function VisaPage({ params: { token } }: Props) {
 
       <form
         onSubmit={onSubmit}
-        className="mt-5 w-full sm:w-[702px] lg:w-[800px] xl:w-[1200px] border border-gray-400 bg-gray-100 p-1 md:p-5 mx-auto flex flex-col"
+        className="mt-5 w-full sm:w-[702px] lg:w-[800px] xl:w-[1200px] border border-gray-400 bg-transparent p-1 md:p-5 mx-auto flex flex-col"
       >
         <div className="text-black rounded-full text-xs p-2 w-12 mx-auto">
           {currentStepIndex + 1} / {steps.length}
