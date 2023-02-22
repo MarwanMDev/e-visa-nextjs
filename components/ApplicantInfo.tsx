@@ -152,61 +152,19 @@ export function ApplicantInfo({
             Gender
             <span className="text-red-400">*</span>
           </label>
-          <ul className="items-center w-full text-sm font-medium text-gray-900 bg-transparent sm:flex p-1">
-            <li className="w-full">
-              <div className="flex items-center pl-3">
-                <input
-                  id="horizontal-list-radio-license"
-                  type="radio"
-                  value={gender}
-                  name="list-radio"
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                />
-                <label
-                  htmlFor="horizontal-list-radio-license"
-                  className="ml-2 text-lg font-medium text-gray-900 dark:text-gray-300"
-                >
-                  Male
-                </label>
-              </div>
-            </li>
-            <li className="w-full">
-              <div className="flex items-center pl-3">
-                <input
-                  id="horizontal-list-radio-id"
-                  type="radio"
-                  value={gender}
-                  name="list-radio"
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                />
-                <label
-                  htmlFor="horizontal-list-radio-id"
-                  className="ml-2 text-lg font-medium text-gray-900 dark:text-gray-300"
-                >
-                  Female
-                </label>
-              </div>
-            </li>
-          </ul>
-
-          {/* <label
-            htmlFor="gender"
-            className="block mb-2 font-bold text-lg text-blue-900 uppercase"
-          >
-            Gender
-            <span className="text-red-400">*</span>
-          </label>
           <select
             value={gender}
             onChange={(e) => updateFields({ gender: e.target.value })}
             id="gender"
             required
-            className="bg-gray-50 border text-lg border-gray-300 text-black rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-5"
+            className="bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           >
-            <option selected>Choose a gender</option>
-            <option>Male</option>
-            <option>Female</option>
-          </select> */}
+            <option value="" disabled>
+              Choose gender
+            </option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
         </div>
         <div>
           <label

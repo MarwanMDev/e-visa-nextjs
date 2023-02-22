@@ -106,17 +106,24 @@ function VisaPage({ params: { token } }: Props) {
           is valid for up to 10 years.
         </p> */}
       </div>
-      <div className="hidden lg:flex flex-row text-black justify-center gap-3 items-center mt-5">
-        {steps.map((step, i) => (
-          <div
-            key={i}
-            className={`${
-              i == 0 && 'active'
-            } p-5 text-center text-base bg-transparent h-[84px] max-w-[140px] border border-gray-400 text-black dark:text-white cursor-pointer`}
-          >
-            {step.key}
-          </div>
-        ))}
+      <div className="hidden lg:flex flex-row justify-center w-full mx-auto mt-10 mb-10">
+        <ol className="flex flex-row justify-center items-center w-full space-y-4 sm:space-x-8 sm:space-y-0">
+          {steps.map((step, i) => (
+            <li
+              key={i}
+              className="flex items-center text-blue-600 dark:text-blue-500 space-x-2.5"
+            >
+              <span className="text-black dark:text-white flex items-center justify-center w-8 h-8 border border-blue-600 rounded-full shrink-0 dark:border-blue-500">
+                {i + 1}
+              </span>
+              <span>
+                <h3 className="font-medium leading-tight text-black dark:text-white">
+                  {step.key}
+                </h3>
+              </span>
+            </li>
+          ))}
+        </ol>
       </div>
 
       <form

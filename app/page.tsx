@@ -48,22 +48,22 @@ export default function Home() {
       </p>
 
       <div className="text-black flex flex-col lg:flex-row justify-center items-center w-full gap-2 md:gap-2">
-        <div className="w-full h-48 flex flex-col items-center justify-center space-y-2 p-10 border bg-[#2c3072] dark:bg-transparent text-white hover:scale-105 transition duration-200 ease-out cursor-pointer">
+        <div className="w-full h-48 flex flex-col items-center justify-center space-y-2 p-10 border bg-[#2c3072] dark:bg-transparent text-white hover:scale-105 transition duration-700 ease-out cursor-pointer">
           <DocumentIcon className="h-20 w-20" />
 
           <h2 className="font-semibold text-lg">Tourism</h2>
         </div>
-        <div className="w-full h-48 flex flex-col items-center justify-center space-y-2 p-10 border bg-[#2c3072] dark:bg-transparent text-white hover:scale-105 transition duration-200 ease-out cursor-pointer">
+        <div className="w-full h-48 flex flex-col items-center justify-center space-y-2 p-10 border bg-[#2c3072] dark:bg-transparent text-white hover:scale-105 transition duration-700 ease-out cursor-pointer">
           <BriefcaseIcon className="h-20 w-20" />
 
           <h2 className="font-semibold text-lg">Business</h2>
         </div>
-        <div className="w-full h-48 flex flex-col items-center justify-center space-y-2 p-10 border bg-[#2c3072] dark:bg-transparent text-white hover:scale-105 transition duration-200 ease-out cursor-pointer">
+        <div className="w-full h-48 flex flex-col items-center justify-center space-y-2 p-10 border bg-[#2c3072] dark:bg-transparent text-white hover:scale-105 transition duration-700 ease-out cursor-pointer">
           <GlobeAltIcon className="h-20 w-20" />
 
           <h2 className="font-semibold text-lg">Transit</h2>
         </div>
-        <div className="w-full h-48 flex flex-col items-center justify-center space-y-2 p-10 border bg-[#2c3072] dark:bg-transparent text-white hover:scale-105 transition duration-200 ease-out cursor-pointer">
+        <div className="w-full h-48 flex flex-col items-center justify-center space-y-2 p-10 border bg-[#2c3072] dark:bg-transparent text-white hover:scale-105 transition duration-700 ease-out cursor-pointer">
           <AcademicCapIcon className="h-20 w-20" />
 
           <h2 className="font-semibold text-lg">Study</h2>
