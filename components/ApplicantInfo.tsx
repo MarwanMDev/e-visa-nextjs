@@ -59,7 +59,7 @@ export function ApplicantInfo({
           value={email}
           onChange={(e) => updateFields({ email: e.target.value })}
           id="email"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-[#2c3072] focus:border-[#2c3072] block w-full p-2 md:p-5"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-700"
           placeholder="Email Address"
           required
         />
@@ -91,7 +91,7 @@ export function ApplicantInfo({
               updateFields({ firstName: e.target.value })
             }
             id="firstName"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-700"
             placeholder="FIRST (GIVEN) NAME(S)"
             required
           />
@@ -115,7 +115,7 @@ export function ApplicantInfo({
               updateFields({ lastName: e.target.value })
             }
             id="lastName"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-700"
             placeholder="FAMILY NAME(S)"
             required
           />
@@ -138,7 +138,7 @@ export function ApplicantInfo({
           value={fullName}
           onChange={(e) => updateFields({ fullName: e.target.value })}
           id="fullName"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-700"
           placeholder="Full Name In Native Alphabet"
           required
         />
@@ -164,7 +164,7 @@ export function ApplicantInfo({
                 />
                 <label
                   htmlFor="horizontal-list-radio-license"
-                  className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  className="ml-2 text-lg font-medium text-gray-900 dark:text-gray-300"
                 >
                   Male
                 </label>
@@ -181,7 +181,7 @@ export function ApplicantInfo({
                 />
                 <label
                   htmlFor="horizontal-list-radio-id"
-                  className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  className="ml-2 text-lg font-medium text-gray-900 dark:text-gray-300"
                 >
                   Female
                 </label>
@@ -223,7 +223,7 @@ export function ApplicantInfo({
             }
             id="maritalStatus"
             required
-            className="bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5"
+            className="bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           >
             <option value="" disabled>
               Choose a marital status
@@ -246,7 +246,7 @@ export function ApplicantInfo({
             <span className="text-red-400">*</span>
           </label>
           <DatePicker
-            className="bg-white text-black w-full p-2 md:p-5 text-xs md:text-lg"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-700"
             selected={dob}
             onChange={(date) => console.log(date)}
           />
@@ -266,7 +266,7 @@ export function ApplicantInfo({
               updateFields({ cityOfBirth: e.target.value })
             }
             id="cityOfBirth"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-700"
             placeholder="City Of Birth"
             required
           />
@@ -289,7 +289,7 @@ export function ApplicantInfo({
           id="countryOfBirth"
           required
           placeholder="Select Country"
-          className="bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5"
+          className="bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         >
           <option value="" disabled>
             Select Country

@@ -123,7 +123,7 @@ function VisaPage({ params: { token } }: Props) {
         onSubmit={onSubmit}
         className="mt-5 w-full sm:w-[702px] lg:w-[800px] xl:w-[1200px] border border-gray-400 bg-transparent p-1 md:p-5 mx-auto flex flex-col"
       >
-        <div className="text-black rounded-full text-xs p-2 w-12 mx-auto">
+        <div className="text-black dark:text-white rounded-full text-xs p-2 w-12 mx-auto">
           {currentStepIndex + 1} / {steps.length}
         </div>
 
