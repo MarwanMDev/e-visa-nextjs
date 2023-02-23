@@ -12,12 +12,12 @@ export default function Home() {
   const router = useRouter();
   return (
     <div className="shadow p-5 border border-gray-100 mb-auto mx-auto max-w-7xl w-3/4 flex flex-col space-y-10 bg-white dark:bg-zinc-700 transition-all duration-700">
-      <h1 className="text-5xl font-normal text-black dark:text-white tracking-widest text-center">
+      <h1 className="text-3xl md:text-5xl font-normal text-black dark:text-white tracking-widest text-center">
         GET STARTED
       </h1>
 
       <div className="w-full">
-        <label className="block mb-2 text-lg font-medium text-gray-900 dark:text-white">
+        <label className="block mb-2 text-base md:text-lg lg:text-xl font-bold text-gray-900 dark:text-white">
           What is your citizenship ?
         </label>
         <select
@@ -38,12 +38,12 @@ export default function Home() {
           value=""
           className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
         />
-        <label className="ml-2 text-base font-medium text-gray-900 dark:text-gray-300">
+        <label className="ml-2 text-xs md:text-sm lg:text-base font-medium text-gray-900 dark:text-gray-300">
           I have more than one citizenship
         </label>
       </div>
 
-      <p className="text-black dark:text-white text-lg font-bold">
+      <p className="text-black text-base md:text-lg lg:text-xl dark:text-white font-bold">
         Select reason(s) for travel to Egypt:
       </p>
 
@@ -76,7 +76,7 @@ export default function Home() {
           onClick={() =>
             router.push('visa/PkOvL59xXwh8vX3QK6yp/apply')
           }
-          className="uppercase w-1/4 p-5 text-lg font-medium text-center text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300"
+          className="uppercase w-full md:w-1/4 p-5 text-base md:text-lg font-medium text-center text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300"
         >
           Continue
         </button>
