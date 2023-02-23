@@ -24,7 +24,7 @@ function Footer() {
             />
           ) : (
             <Image
-              className="cursor-pointer"
+              className="cursor-pointer object-contain w-[220px] md:w-[280px]"
               src={logo}
               width={360}
               height={360}
@@ -35,7 +35,7 @@ function Footer() {
       </div>
 
       <div>
-        <span className="text-lg text-black dark:text-white">
+        <span className="text-sm md:text-base text-black dark:text-white">
           © 2023{' '}
           <a href="https://egyptair.com/" className="hover:underline">
             EGYPTAIR
@@ -45,20 +45,20 @@ function Footer() {
       </div>
 
       <div className="">
-        <span className="text-lg text-gray-500 dark:text-gray-400">
+        <span className="text-sm md:text-base text-gray-500 dark:text-gray-400">
           Legal Disclaimer: This website is not affilated with the
           government
         </span>
       </div>
 
       <div className="flex justify-center items-center">
-        <CheckBadgeIcon className="h-20 text-green-500" />
-        <h2 className="text-2xl text-black dark:text-white">
+        <CheckBadgeIcon className="h-8 md:h-16 text-green-500" />
+        <h2 className="text-base md:text-xl text-black dark:text-white">
           Secure
         </h2>
       </div>
       <div className="">
-        <span className="text-lg text-center text-black dark:text-white">
+        <span className="text-sm md:text-base text-center text-black dark:text-white">
           Terms & Conditions | Privacy Policy | Legal Disclaimer |
           Refund Policy
         </span>
