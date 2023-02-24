@@ -11,7 +11,7 @@ import { useRouter } from 'next/navigation';
 export default function Home() {
   const router = useRouter();
   return (
-    <div className="shadow p-5 border border-gray-100 mb-auto mx-auto max-w-7xl w-3/4 flex flex-col space-y-10 bg-white dark:bg-zinc-700 transition-all duration-700">
+    <div className="shadow p-5 border border-gray-100 m-auto mx-auto max-w-7xl w-3/4 flex flex-col space-y-10 bg-white dark:bg-zinc-700 transition-all duration-700">
       <h1 className="text-3xl md:text-5xl font-normal text-black dark:text-white tracking-widest text-center">
         GET STARTED
       </h1>

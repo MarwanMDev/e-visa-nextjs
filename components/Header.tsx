@@ -58,7 +58,7 @@ const Header = () => {
 
         <Link
           href="/"
-          className="px-3 py-2 md:px-5 md:py-3 text-xs md:text-xl bg-gray-200 text-[#2c3072] md:font-medium"
+          className="hidden md:inline px-3 py-2 md:px-5 md:py-3 text-xs md:text-xl bg-gray-200 text-[#2c3072] md:font-medium"
         >
           Live Help
         </Link>

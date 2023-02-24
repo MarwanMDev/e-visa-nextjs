@@ -11,7 +11,7 @@ function Footer() {
   const { theme } = useTheme();
 
   return (
-    <footer className="p-2 h-80 border-t border-gray-200 flex flex-col items-center justify-center gap-1 bg-white mt-5 dark:bg-zinc-700 transition-all duration-700">
+    <footer className="p-2 h-auto border-t border-gray-200 flex flex-col items-center justify-start gap-1 bg-white mt-5 dark:bg-zinc-700 transition-all duration-700">
       <div>
         <Link href="/">
           {theme === 'dark' ? (
