@@ -16,7 +16,7 @@ function Footer() {
         <Link href="/">
           {theme === 'dark' ? (
             <Image
-              className="cursor-pointer"
+              className="cursor-pointer object-contain w-[220px] md:w-[280px]"
               src={logoWhite}
               width={360}
               height={360}
@@ -44,8 +44,8 @@ function Footer() {
         </span>
       </div>
 
-      <div className="">
-        <span className="text-sm md:text-base text-gray-500 dark:text-gray-400">
+      <div className="flex justify-center items-center">
+        <span className="text-sm md:text-base text-center text-gray-500 dark:text-gray-400">
           Legal Disclaimer: This website is not affilated with the
           government
         </span>
@@ -57,7 +57,7 @@ function Footer() {
           Secure
         </h2>
       </div>
-      <div className="">
+      <div className="flex justify-center items-center">
         <span className="text-sm md:text-base text-center text-black dark:text-white">
           Terms & Conditions | Privacy Policy | Legal Disclaimer |
           Refund Policy

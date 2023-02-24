@@ -14,11 +14,11 @@ const Header = () => {
 
   return (
     <header className="bg-white mb-4 flex items-center justify-between space-x-2 font-bold px-10 py-5 shadow-lg dark:bg-zinc-700 transition-all duration-700">
-      <div className="hidden md:flex items-center space-x-2">
+      <div className="flex items-center space-x-2">
         <Link href="/">
           {theme === 'dark' ? (
             <Image
-              className="rounded-full"
+              className="cursor-pointer object-contain w-[220px] md:w-[280px]"
               src={logoWhite}
               width={360}
               height={360}
@@ -26,7 +26,7 @@ const Header = () => {
             />
           ) : (
             <Image
-              className="rounded-full"
+              className="cursor-pointer object-contain w-[220px] md:w-[280px]"
               src={logo}
               width={360}
               height={360}
@@ -36,7 +36,7 @@ const Header = () => {
         </Link>
       </div>
 
-      <div className="hidden xl:inline-flex flex-row justify-center items-center space-x-2">
+      <div className="hidden 2xl:inline-flex flex-row justify-center items-center space-x-2">
         <h2 className="text-4xl text-[#2c3072] dark:text-white transition duration-100">
           Join More Than 95,000+ Satisfied Travelers
         </h2>
@@ -46,19 +46,19 @@ const Header = () => {
           ))}
         </div>
       </div>
-      <div className="flex flex-row space-x-5 items-center justify-center">
+      <div className="flex flex-row space-x-5 items-center justify-center ">
         <div>
           <DarkModeButton />
         </div>
         <div>
-          <h2 className="text-xl text-[#2c3072] dark:text-white transition duration-100">
+          <h2 className="text-xs md:text-xl text-[#2c3072] dark:text-white transition duration-100">
             English
           </h2>
         </div>
 
         <Link
           href="/"
-          className="px-5 py-3 text-sm md:text-xl bg-gray-200 text-[#2c3072] flex items-center rounded-md text-center font-medium"
+          className="px-3 py-2 md:px-5 md:py-3 text-xs md:text-xl bg-gray-200 text-[#2c3072] md:font-medium"
         >
           Live Help
         </Link>
