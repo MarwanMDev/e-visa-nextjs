@@ -13,8 +13,8 @@ const Header = () => {
   const { theme } = useTheme();
 
   return (
-    <header className="bg-white mb-4 flex items-center justify-between space-x-2 font-bold px-10 py-5 shadow-lg dark:bg-zinc-700 transition-all duration-700">
-      <div className="flex items-center space-x-2">
+    <header className="bg-white mb-4 flex flex-col md:flex-row items-center justify-between space-x-2 font-bold px-10 py-5 shadow-lg dark:bg-zinc-700 transition-all duration-700">
+      <div className="flex items-center">
         <Link href="/">
           {theme === 'dark' ? (
             <Image
@@ -46,7 +46,7 @@ const Header = () => {
           ))}
         </div>
       </div>
-      <div className="flex flex-row space-x-5 items-center justify-center ">
+      <div className="flex flex-col md:flex-row gap-3 items-center justify-center ">
         <div>
           <DarkModeButton />
         </div>
