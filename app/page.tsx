@@ -12,7 +12,7 @@ export default function Home() {
   const router = useRouter();
   return (
     <div className="shadow p-5 border border-gray-100 m-auto mx-auto w-full sm:w-[768px] lg:w-[900px] xl:w-[1240px] 2xl:w-[1600px] flex flex-col space-y-10 bg-white dark:bg-zinc-700 transition-all duration-700">
-      <h1 className="text-3xl md:text-5xl font-normal text-black dark:text-white tracking-widest text-center">
+      <h1 className="text-3xl lg:text-4xl xl:text-5xl text-black dark:text-white tracking-widest text-center">
         GET STARTED
       </h1>
 
@@ -22,7 +22,7 @@ export default function Home() {
         </label>
         <select
           id="countries"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-base focus:ring-blue-500 focus:border-blue-500 block w-full p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-200"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm md:text-base focus:ring-blue-500 focus:border-blue-500 block w-full p-3 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-200"
         >
           <option>United States</option>
           <option>Canada</option>
@@ -48,25 +48,33 @@ export default function Home() {
       </p>
 
       <div className="text-black flex flex-col lg:flex-row justify-center items-center w-full gap-2 md:gap-2">
-        <div className="w-full h-48 flex flex-col items-center justify-center space-y-2 p-10 border bg-[#2c3072] dark:bg-transparent text-white hover:scale-105 transition duration-700 ease-out cursor-pointer">
-          <DocumentIcon className="h-20 w-20" />
+        <div className="w-full h-36 sm:h-48 flex flex-col items-center justify-center space-y-2 p-10 border bg-[#2c3072] dark:bg-transparent text-white hover:scale-105 transition duration-700 ease-out cursor-pointer">
+          <DocumentIcon className="h-18 md:h-20 w-10 md:w-20" />
 
-          <h2 className="font-semibold text-lg">Tourism</h2>
+          <h2 className="font-semibold text-base md:text-lg">
+            Tourism
+          </h2>
         </div>
-        <div className="w-full h-48 flex flex-col items-center justify-center space-y-2 p-10 border bg-[#2c3072] dark:bg-transparent text-white hover:scale-105 transition duration-700 ease-out cursor-pointer">
+        <div className="w-full h-36 sm:h-48 flex flex-col items-center justify-center space-y-2 p-10 border bg-[#2c3072] dark:bg-transparent text-white hover:scale-105 transition duration-700 ease-out cursor-pointer">
           <BriefcaseIcon className="h-20 w-20" />
 
-          <h2 className="font-semibold text-lg">Business</h2>
+          <h2 className="font-semibold text-base md:text-lg">
+            Business
+          </h2>
         </div>
-        <div className="w-full h-48 flex flex-col items-center justify-center space-y-2 p-10 border bg-[#2c3072] dark:bg-transparent text-white hover:scale-105 transition duration-700 ease-out cursor-pointer">
+        <div className="w-full h-36 sm:h-48 flex flex-col items-center justify-center space-y-2 p-10 border bg-[#2c3072] dark:bg-transparent text-white hover:scale-105 transition duration-700 ease-out cursor-pointer">
           <GlobeAltIcon className="h-20 w-20" />
 
-          <h2 className="font-semibold text-lg">Transit</h2>
+          <h2 className="font-semibold text-base md:text-lg">
+            Transit
+          </h2>
         </div>
-        <div className="w-full h-48 flex flex-col items-center justify-center space-y-2 p-10 border bg-[#2c3072] dark:bg-transparent text-white hover:scale-105 transition duration-700 ease-out cursor-pointer">
+        <div className="w-full h-36 sm:h-48 flex flex-col items-center justify-center space-y-2 p-10 border bg-[#2c3072] dark:bg-transparent text-white hover:scale-105 transition duration-700 ease-out cursor-pointer">
           <AcademicCapIcon className="h-20 w-20" />
 
-          <h2 className="font-semibold text-lg">Study</h2>
+          <h2 className="font-semibold text-base md:text-lg">
+            Study
+          </h2>
         </div>
       </div>
 
