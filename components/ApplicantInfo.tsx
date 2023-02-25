@@ -3,17 +3,7 @@ import DatePicker from 'react-datepicker';
 
 import 'react-datepicker/dist/react-datepicker.css';
 import { QuestionMarkCircleIcon } from '@heroicons/react/24/solid';
-type ApplicantInfoData = {
-  email: string;
-  firstName: string;
-  lastName: string;
-  fullName: string;
-  gender: string;
-  dob: Date;
-  maritalStatus: string;
-  cityOfBirth: string;
-  countryOfBirth: string;
-};
+import { ApplicantInfoData } from '@/typings';
 
 type ApplicantInfoFormProps = ApplicantInfoData & {
   updateFields: (fields: Partial<ApplicantInfoData>) => void;
@@ -63,7 +53,6 @@ export function ApplicantInfo({
           placeholder="Email Address"
           required
         />
-
         <p className="text-xs sm:text-base text-justify text-[#2c3072]/70 dark:text-gray-400 font-light w-full tracking-wider mt-1">
           Email Address Please make sure you enter a valid email
           address. We will use it to contact you about your

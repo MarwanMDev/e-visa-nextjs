@@ -7,10 +7,10 @@ import { PassportInfo } from '@/components/PassportInfo';
 import { SecurityQuestions } from '@/components/SecurityQuestions';
 import { TripDetails } from '@/components/TripDetails';
 import { useMultistepForm } from '@/hooks/useMultistepForm';
+import { Visa } from '@/typings';
 import { CheckBadgeIcon } from '@heroicons/react/24/solid';
 import { useRouter } from 'next/navigation';
 import React, { FormEvent, useState } from 'react';
-import { useForm, SubmitHandler } from 'react-hook-form';
 
 type Props = {
   params: {
@@ -18,19 +18,7 @@ type Props = {
   };
 };
 
-type FormData = {
-  email: string;
-  firstName: string;
-  lastName: string;
-  fullName: string;
-  gender: string;
-  maritalStatus: string;
-  dob: Date;
-  cityOfBirth: string;
-  countryOfBirth: string;
-};
-
-const INITIAL_DATA: FormData = {
+const initialValues: Visa = {
   email: '',
   firstName: '',
   lastName: '',
@@ -40,12 +28,20 @@ const INITIAL_DATA: FormData = {
   dob: new Date(),
   cityOfBirth: '',
   countryOfBirth: '',
+  passportType: '',
+  passportNumber: '',
+  passportIssuanceCountry: '',
+  passportIssuanceCity: '',
+  passportIssuanceCountryTwo: '',
+  passportIssuanceDate: new Date(),
+  passportExpiryDate: new Date(),
+  nationality: '',
 };
 
 function VisaPage({ params: { token } }: Props) {
-  const [data, setData] = useState(INITIAL_DATA);
+  const [data, setData] = useState(initialValues);
   const router = useRouter();
-  function updateFields(fields: Partial<FormData>) {
+  function updateFields(fields: Partial<Visa>) {
     setData((prev) => {
       return { ...prev, ...fields };
     });
@@ -64,17 +60,24 @@ function VisaPage({ params: { token } }: Props) {
       {...data}
       updateFields={updateFields}
     />,
-    <PassportInfo key="Passport Information" />,
+    <PassportInfo
+      {...data}
+      updateFields={updateFields}
+      key="Passport Information"
+    />,
     <ContactInfo key="Contact Information" />,
     <TripDetails key="Trip Details" />,
     <EgyptContact key="Egypt Contact" />,
     <SecurityQuestions key="Security Questions" />,
   ]);
 
-  function onSubmit(e: FormEvent) {
+  async function onSubmit(e: FormEvent) {
     e.preventDefault();
     console.log(data);
     if (!isLastStep) return next();
+    // const res = await fetch('https://mdev.cyclic.app')
+    //   .then((response) => response.json())
+    //   .then((data) => console.log(data));
     router.push('visa/PkOvL59xXwh8vX3QK6yp/confirmation');
   }
 
@@ -91,33 +94,44 @@ function VisaPage({ params: { token } }: Props) {
         <p className="font-bold text-center text-sm md:text-lg text-black dark:text-white transition-all duration-100">
           If you apply, make sure:
         </p>
-        <p className="flex flex-row justify-center items-center text-sm md:text-lg text-black dark:text-white transition-all duration-100">
+        <p className="flex flex-row justify-center items-center text-justify text-sm md:text-lg text-black dark:text-white transition-all duration-100">
           <CheckBadgeIcon className="h-6 text-green-600" />
           You’re visiting for a maximum of 6 months
         </p>
-        <p className="flex flex-row justify-center items-center text-sm md:text-lg text-black dark:text-white transition-all duration-100">
+        <p className="flex flex-row justify-center items-center text-justify text-sm md:text-lg text-black dark:text-white transition-all duration-100">
           <CheckBadgeIcon className="h-6 text-green-600" />
           You’re traveling exclusively for business, transit or
           pleasure
         </p>
-        {/* <p>
-          <span className="font-bold">Please Note:</span> Embassy
-          Visit is Required for Interview. Once approved, your permit
-          is valid for up to 10 years.
-        </p> */}
       </div>
       <div className="hidden lg:flex flex-row justify-center w-full mx-auto mt-10 mb-10">
         <ol className="flex flex-row justify-center items-center w-full space-y-4 sm:space-x-8 sm:space-y-0">
           {steps.map((step, i) => (
             <li
               key={i}
-              className="flex items-center text-blue-600 dark:text-blue-500 space-x-2.5"
+              className="flex items-center text-blue-600 dark:text-blue-500 space-x-2.5 cursor-pointer"
             >
-              <span className="text-black dark:text-white flex items-center justify-center w-8 h-8 border border-blue-600 rounded-full shrink-0 dark:border-blue-500">
+              <span
+                className={`text-black dark:text-white flex items-center justify-center w-8 h-8 ${
+                  currentStepIndex === i
+                    ? 'border border-green-600 rounded-full shrink-0 dark:border-green-500 bg-green-500'
+                    : currentStepIndex > i
+                    ? 'border border-green-400 rounded-full shrink-0 dark:border-green-400 bg-green-400'
+                    : 'border border-blue-600 rounded-full shrink-0 dark:border-blue-500'
+                }`}
+              >
                 {i + 1}
               </span>
               <span>
-                <h3 className="font-medium leading-tight text-black dark:text-white">
+                <h3
+                  className={`text-base tracking-wider leading-tight text-black dark:text-white ${
+                    currentStepIndex === i
+                      ? 'font-semibold'
+                      : currentStepIndex > i
+                      ? 'font-normal'
+                      : 'font-thin'
+                  }`}
+                >
                   {step.key}
                 </h3>
               </span>
@@ -142,14 +156,14 @@ function VisaPage({ params: { token } }: Props) {
               onClick={back}
               className="text-white text-sm md:text-lg uppercase font-bold bg-gray-600 p-2 md:p-6 w-[100px] md:w-[200px]"
             >
-              Back
+              Previous Step
             </button>
           )}
           <button
             type="submit"
             className="text-white text-sm md:text-lg uppercase font-bold bg-red-600 p-2 md:p-6 w-[100px] md:w-[200px] float-right"
           >
-            {isLastStep ? 'Finish' : 'Next'}
+            {isLastStep ? 'Finish' : 'Next Step'}
           </button>
         </div>
       </form>
