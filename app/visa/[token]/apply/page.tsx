@@ -36,6 +36,24 @@ const initialValues: Visa = {
   passportIssuanceDate: new Date(),
   passportExpiryDate: new Date(),
   nationality: '',
+  streetAddressOne: '',
+  streetAddressTwo: '',
+  contactCity: '',
+  contactPostalCode: '',
+  contactCountry: '',
+  primaryPhoneNumber: '',
+  secondaryPhoneNumber: '',
+  workPhoneNumber: '',
+  applyingLocation: '',
+  reasonForTrip: '',
+  purposeOfTrip: '',
+  tripSpecify: '',
+  travelPlan: '',
+  otherCompanions: '',
+  withGroupOrOrganization: '',
+  everBeenInEgypt: '',
+  everIssuedVisa: '',
+  personPayingTrip: '',
 };
 
 function VisaPage({ params: { token } }: Props) {
@@ -65,8 +83,16 @@ function VisaPage({ params: { token } }: Props) {
       updateFields={updateFields}
       key="Passport Information"
     />,
-    <ContactInfo key="Contact Information" />,
-    <TripDetails key="Trip Details" />,
+    <ContactInfo
+      {...data}
+      updateFields={updateFields}
+      key="Contact Information"
+    />,
+    <TripDetails
+      {...data}
+      updateFields={updateFields}
+      key="Trip Details"
+    />,
     <EgyptContact key="Egypt Contact" />,
     <SecurityQuestions key="Security Questions" />,
   ]);

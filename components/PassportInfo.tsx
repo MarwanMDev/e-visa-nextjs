@@ -38,7 +38,7 @@ export function PassportInfo({
           onChange={(e) =>
             updateFields({ passportType: e.target.value })
           }
-          required
+          // required
           placeholder="Select Type"
           className="w-full md:w-1/2 bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         >
@@ -81,7 +81,7 @@ export function PassportInfo({
             }
             className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-700"
             placeholder="Passport Number"
-            required
+            // required
           />
           <p className="w-full text-xs sm:text-base text-justify text-[#2c3072]/70 dark:text-gray-400 font-light tracking-wider mt-1">
             Enter the passport number exactly as it appears on the
@@ -104,7 +104,7 @@ export function PassportInfo({
           onChange={(e) =>
             updateFields({ passportIssuanceCountry: e.target.value })
           }
-          required
+          // required
           placeholder="Select Country"
           className="w-full md:w-1/2 bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         >
@@ -134,7 +134,7 @@ export function PassportInfo({
           }
           className="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-700"
           placeholder="City"
-          required
+          // required
         />
       </div>
       <div className="md:flex items-center gap-5 mt-4">
@@ -154,7 +154,7 @@ export function PassportInfo({
               passportIssuanceCountryTwo: e.target.value,
             })
           }
-          required
+          // required
           placeholder="Select Country"
           className="w-full md:w-1/2 bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         >
@@ -214,7 +214,7 @@ export function PassportInfo({
               nationality: e.target.value,
             })
           }
-          required
+          // required
           placeholder="Select Country"
           className="w-full md:w-1/2 bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         >

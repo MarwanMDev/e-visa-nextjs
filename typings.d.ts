@@ -16,6 +16,24 @@ export type Visa = {
   passportIssuanceDate: Date;
   passportExpiryDate: Date;
   nationality: string;
+  streetAddressOne: string;
+  streetAddressTwo: string;
+  contactCity: string;
+  contactPostalCode: string;
+  contactCountry: string;
+  primaryPhoneNumber: string;
+  secondaryPhoneNumber: string;
+  workPhoneNumber: string;
+  applyingLocation: string;
+  reasonForTrip: string;
+  purposeOfTrip: string;
+  tripSpecify: string;
+  travelPlan: string;
+  otherCompanions: string;
+  withGroupOrOrganization: string;
+  everBeenInEgypt: string;
+  everIssuedVisa: string;
+  personPayingTrip: string;
 };
 
 export type ApplicantInfoData = {
@@ -39,4 +57,28 @@ export type PassportInfoData = {
   passportIssuanceDate: Date;
   passportExpiryDate: Date;
   nationality: string;
+};
+
+export type ContactInfoData = {
+  streetAddressOne: string;
+  streetAddressTwo: string;
+  contactCity: string;
+  contactPostalCode: string;
+  contactCountry: string;
+  primaryPhoneNumber: string;
+  secondaryPhoneNumber: string;
+  workPhoneNumber: string;
+};
+
+export type TripDetailsData = {
+  applyingLocation: string;
+  reasonForTrip: string;
+  purposeOfTrip: string;
+  tripSpecify: string;
+  travelPlan: string;
+  otherCompanions: string;
+  withGroupOrOrganization: string;
+  everBeenInEgypt: string;
+  everIssuedVisa: string;
+  personPayingTrip: string;
 };

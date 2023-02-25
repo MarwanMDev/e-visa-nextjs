@@ -21,6 +21,12 @@ export function ApplicantInfo({
   countryOfBirth,
   updateFields,
 }: ApplicantInfoFormProps) {
+  const genderChangeHandler = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    updateFields({ gender: e.target.value });
+  };
+
   return (
     <FormWrapper>
       <h2 className="text-lg sm:text-2xl lg:text-3xl text-[#2c3072] dark:text-white font-bold mb-4">
@@ -51,7 +57,7 @@ export function ApplicantInfo({
           id="email"
           className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-700"
           placeholder="Email Address"
-          required
+          // required
         />
         <p className="text-xs sm:text-base text-justify text-[#2c3072]/70 dark:text-gray-400 font-light w-full tracking-wider mt-1">
           Email Address Please make sure you enter a valid email
@@ -82,7 +88,7 @@ export function ApplicantInfo({
             id="firstName"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-700"
             placeholder="FIRST (GIVEN) NAME(S)"
-            required
+            // required
           />
           <p className="text-xs sm:text-base text-[#2c3072]/70 dark:text-gray-400 font-light w-full tracking-wider mt-1 text-justify">
             Please make sure the first name(s) are exactly as shown on
@@ -106,7 +112,7 @@ export function ApplicantInfo({
             id="lastName"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-700"
             placeholder="FAMILY NAME(S)"
-            required
+            // required
           />
           <p className="text-xs sm:text-base text-[#2c3072]/70 dark:text-gray-400 font-light w-full tracking-wider mt-1 text-justify">
             Please make sure the family name(s) are exactly as shown
@@ -129,7 +135,7 @@ export function ApplicantInfo({
           id="fullName"
           className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-700"
           placeholder="Full Name In Native Alphabet"
-          required
+          // required
         />
       </div>
       <div className="grid gap-6 mb-6 md:grid-cols-2 p-2.5">
@@ -141,19 +147,40 @@ export function ApplicantInfo({
             Gender
             <span className="text-red-400">*</span>
           </label>
-          <select
-            value={gender}
-            onChange={(e) => updateFields({ gender: e.target.value })}
-            id="gender"
-            required
-            className="bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          >
-            <option value="" disabled>
-              Choose gender
-            </option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
+          <div className="flex flex-row items-center">
+            <div className="flex items-center mr-4">
+              <input
+                id="inline-radio"
+                type="radio"
+                value="male"
+                onChange={genderChangeHandler}
+                name="inline-radio-group"
+                className="w-3 md:w-5 h-3 md:h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                htmlFor="inline-radio"
+                className="ml-2 text-sm md:text-lg text-gray-900 dark:text-gray-300"
+              >
+                Male
+              </label>
+            </div>
+            <div className="flex items-center mr-4">
+              <input
+                id="inline-2-radio"
+                type="radio"
+                value="female"
+                onChange={genderChangeHandler}
+                name="inline-radio-group"
+                className="w-3 md:w-5 h-3 md:h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                htmlFor="inline-2-radio"
+                className="ml-2 text-sm md:text-lg text-gray-900 dark:text-gray-300"
+              >
+                Female
+              </label>
+            </div>
+          </div>
         </div>
         <div>
           <label
@@ -169,7 +196,7 @@ export function ApplicantInfo({
               updateFields({ maritalStatus: e.target.value })
             }
             id="maritalStatus"
-            required
+            // required
             className="bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           >
             <option value="" disabled>
@@ -215,7 +242,7 @@ export function ApplicantInfo({
             id="cityOfBirth"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-700"
             placeholder="City Of Birth"
-            required
+            // required
           />
         </div>
       </div>
@@ -234,7 +261,7 @@ export function ApplicantInfo({
             updateFields({ countryOfBirth: e.target.value })
           }
           id="countryOfBirth"
-          required
+          // required
           placeholder="Select Country"
           className="bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         >
