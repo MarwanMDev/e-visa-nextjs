@@ -104,8 +104,8 @@ function VisaPage({ params: { token } }: Props) {
           pleasure
         </p>
       </div>
-      <div className="hidden lg:flex flex-row justify-center w-full mx-auto mt-10 mb-10">
-        <ol className="flex flex-row justify-center items-center w-full space-y-4 sm:space-x-8 sm:space-y-0">
+      <div className="flex flex-row justify-center w-full mx-auto mt-10 mb-10">
+        <ol className="flex flex-row justify-center items-center w-full space-x-2 sm:space-x-8">
           {steps.map((step, i) => (
             <li
               key={i}
@@ -124,7 +124,7 @@ function VisaPage({ params: { token } }: Props) {
               </span>
               <span>
                 <h3
-                  className={`text-base tracking-wider leading-tight text-black dark:text-white ${
+                  className={`hidden xl:inline text-base tracking-wider leading-tight text-black dark:text-white ${
                     currentStepIndex === i
                       ? 'font-semibold'
                       : currentStepIndex > i
@@ -144,12 +144,12 @@ function VisaPage({ params: { token } }: Props) {
         onSubmit={onSubmit}
         className="mt-5 w-full sm:w-[702px] lg:w-[800px] xl:w-[1200px] border border-gray-400 bg-transparent p-1 md:p-5 mx-auto flex flex-col"
       >
-        <div className="text-black dark:text-white rounded-full text-xs p-2 w-12 mx-auto">
+        {/* <div className="text-black dark:text-white rounded-full text-xs p-2 w-12 mx-auto">
           {currentStepIndex + 1} / {steps.length}
-        </div>
+        </div> */}
 
         {step}
-        <div className="m-8">
+        <div className="m-8 flex flex-row gap-1 justify-between">
           {!isFirstStep && (
             <button
               type="button"

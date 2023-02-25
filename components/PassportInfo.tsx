@@ -27,7 +27,7 @@ export function PassportInfo({
       <div className="md:flex items-center gap-5 mt-4">
         <label
           htmlFor="passportType"
-          className="w-1/2 flex flex-row items-center mb-2 font-bold text-sm md:text-lg text-[#2c3072] dark:text-white uppercase"
+          className="w-full md:w-1/2 flex flex-row items-center mb-2 font-bold text-sm md:text-lg text-[#2c3072] dark:text-white uppercase"
         >
           PASSPORT/TRAVEL DOCUMENT TYPE
           <span className="text-red-400"> * </span>
@@ -40,7 +40,7 @@ export function PassportInfo({
           }
           required
           placeholder="Select Type"
-          className="bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="w-full md:w-1/2 bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         >
           <option value="" disabled>
             Select Type
@@ -55,7 +55,7 @@ export function PassportInfo({
       <div className="md:flex items-center gap-5 mt-4">
         <label
           htmlFor="passportNumber"
-          className="w-1/2 flex flex-row items-center mb-2 font-bold text-sm md:text-lg text-[#2c3072] dark:text-white uppercase"
+          className="w-full md:w-1/2 flex flex-row items-center mb-2 font-bold text-sm md:text-lg text-[#2c3072] dark:text-white uppercase"
         >
           PASSPORT/TRAVEL DOCUMENT NUMBER
           <span className="text-red-400"> * </span>
@@ -71,7 +71,7 @@ export function PassportInfo({
             </span>
           </a>
         </label>
-        <div className="flex flex-col w-1/2">
+        <div className="flex flex-col w-full md:w-1/2">
           <input
             type="text"
             id="passportNumber"
@@ -79,11 +79,11 @@ export function PassportInfo({
             onChange={(e) =>
               updateFields({ passportNumber: e.target.value })
             }
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-700"
+            className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-700"
             placeholder="Passport Number"
             required
           />
-          <p className="text-xs sm:text-base text-justify text-[#2c3072]/70 dark:text-gray-400 font-light w-full tracking-wider mt-1">
+          <p className="w-full text-xs sm:text-base text-justify text-[#2c3072]/70 dark:text-gray-400 font-light tracking-wider mt-1">
             Enter the passport number exactly as it appears on the
             passport information page
           </p>
@@ -92,7 +92,7 @@ export function PassportInfo({
       <div className="md:flex items-center gap-5 mt-4">
         <label
           htmlFor="issuanceCountry"
-          className="w-1/2 block mb-2 font-bold text-sm md:text-lg text-[#2c3072] dark:text-white uppercase"
+          className="w-full md:w-1/2 block mb-2 font-bold text-sm md:text-lg text-[#2c3072] dark:text-white uppercase"
         >
           COUNTRY/AUTHORITY THAT ISSUED THE PASSPORT/TRAVEL DOCUMENT
           <span className="text-red-400">*</span>
@@ -106,7 +106,7 @@ export function PassportInfo({
           }
           required
           placeholder="Select Country"
-          className="bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="w-full md:w-1/2 bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         >
           <option value="" disabled>
             Select Country
@@ -120,7 +120,7 @@ export function PassportInfo({
       <div className="md:flex items-center gap-5 mt-4">
         <label
           htmlFor="issuanceCity"
-          className="w-1/2 block mb-2 font-bold text-sm md:text-lg text-[#2c3072] dark:text-white uppercase"
+          className="w-full md:w-1/2 block mb-2 font-bold text-sm md:text-lg text-[#2c3072] dark:text-white uppercase"
         >
           City
           <span className="text-red-400">*</span>
@@ -132,7 +132,7 @@ export function PassportInfo({
           onChange={(e) =>
             updateFields({ passportIssuanceCity: e.target.value })
           }
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-700"
+          className="w-full md:w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-700"
           placeholder="City"
           required
         />
@@ -140,7 +140,7 @@ export function PassportInfo({
       <div className="md:flex items-center gap-5 mt-4">
         <label
           htmlFor="issuanceCountryTwo"
-          className="w-1/2 block mb-2 font-bold text-sm md:text-lg text-[#2c3072] dark:text-white uppercase"
+          className="w-full md:w-1/2 block mb-2 font-bold text-sm md:text-lg text-[#2c3072] dark:text-white uppercase"
         >
           COUNTRY/REGION
           <span className="text-red-400">*</span>
@@ -156,7 +156,7 @@ export function PassportInfo({
           }
           required
           placeholder="Select Country"
-          className="bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="w-full md:w-1/2 bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         >
           <option value="" disabled>
             Select Country
@@ -176,7 +176,7 @@ export function PassportInfo({
           <span className="text-red-400">*</span>
         </label>
         <DatePicker
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-700"
+          className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-700"
           onChange={(date) => console.log(date)}
           selected={new Date()}
           id="issuanceDate"
@@ -200,7 +200,7 @@ export function PassportInfo({
       <div className="md:flex items-center gap-5 mt-4">
         <label
           htmlFor="nationality"
-          className="w-1/2 block mb-2 font-bold text-sm md:text-lg text-[#2c3072] dark:text-white uppercase"
+          className="w-full md:w-1/2 block mb-2 font-bold text-sm md:text-lg text-[#2c3072] dark:text-white uppercase"
         >
           COUNTRY/REGION OF ORIGIN (NATIONALITY)
           <span className="text-red-400">*</span>
@@ -216,7 +216,7 @@ export function PassportInfo({
           }
           required
           placeholder="Select Country"
-          className="bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="w-full md:w-1/2 bg-gray-50 border text-xs md:text-lg border-gray-300 text-black focus:ring-blue-500 focus:border-blue-500 block p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         >
           <option value="" disabled>
             Select Country
