@@ -90,7 +90,7 @@ export const TripDetails = ({
               updateFields({ reasonForTrip: e.target.value })
             }
             className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-xs md:text-lg focus:ring-blue-500 focus:border-blue-500 block p-2 md:p-5 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 transition-all duration-700"
-            placeholder="Reson for the trip"
+            placeholder="Reason for the trip"
             // required
           />
         </div>

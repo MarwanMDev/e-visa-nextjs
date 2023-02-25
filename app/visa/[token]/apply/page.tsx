@@ -2,7 +2,7 @@
 
 import { ApplicantInfo } from '@/components/ApplicantInfo';
 import { ContactInfo } from '@/components/ContactInfo';
-import { EgyptContact } from '@/components/EgyptContact';
+import { FamilyBackground } from '@/components/FamilyBackground';
 import { PassportInfo } from '@/components/PassportInfo';
 import { SecurityQuestions } from '@/components/SecurityQuestions';
 import { TripDetails } from '@/components/TripDetails';
@@ -93,7 +93,7 @@ function VisaPage({ params: { token } }: Props) {
       updateFields={updateFields}
       key="Trip Details"
     />,
-    <EgyptContact key="Egypt Contact" />,
+    <FamilyBackground key="Family Background" />,
     <SecurityQuestions key="Security Questions" />,
   ]);
 
