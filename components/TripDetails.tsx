@@ -179,11 +179,11 @@ export const TripDetails = ({
               value="yes"
               onChange={travelPlanChangeHandler}
               name="travelPlan-radio-group"
-              className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              className="w-4 h-4 md:w-5 md:h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
             />
             <label
               htmlFor="travelPlan-radio"
-              className="ml-2 text-lg text-gray-900 dark:text-gray-300"
+              className="ml-2 text-sm md:text-lg text-gray-900 dark:text-gray-300"
             >
               Yes
             </label>
@@ -195,11 +195,11 @@ export const TripDetails = ({
               value="no"
               onChange={travelPlanChangeHandler}
               name="travelPlan-radio-group"
-              className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              className="w-4 h-4 md:w-5 md:h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
             />
             <label
               htmlFor="travelPlan-radio-2"
-              className="ml-2 text-lg text-gray-900 dark:text-gray-300"
+              className="ml-2 text-sm md:text-lg text-gray-900 dark:text-gray-300"
             >
               No
             </label>
@@ -211,11 +211,11 @@ export const TripDetails = ({
               value="not sure"
               onChange={travelPlanChangeHandler}
               name="inline-radio-group"
-              className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              className="w-4 h-4 md:w-5 md:h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
             />
             <label
               htmlFor="travelPlan-radio-3"
-              className="ml-2 text-lg text-gray-900 dark:text-gray-300"
+              className="ml-2 text-sm md:text-lg text-gray-900 dark:text-gray-300"
             >
               Not Sure
             </label>
@@ -460,11 +460,11 @@ export const TripDetails = ({
               value="yes"
               onChange={otherCompanionsChangeHandler}
               name="otherCompanions-radio-group"
-              className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              className="w-4 h-4 md:w-5 md:h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
             />
             <label
               htmlFor="inline-radio"
-              className="ml-2 text-lg font-medium text-gray-900 dark:text-gray-300"
+              className="ml-2 text-sm md:text-lg text-gray-900 dark:text-gray-300"
             >
               Yes
             </label>
@@ -476,11 +476,11 @@ export const TripDetails = ({
               value="no"
               onChange={otherCompanionsChangeHandler}
               name="otherCompanions-radio-group"
-              className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              className="w-4 h-4 md:w-5 md:h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
             />
             <label
               htmlFor="inline-2-radio"
-              className="ml-2 text-lg font-medium text-gray-900 dark:text-gray-300"
+              className="ml-2 text-sm md:text-lg text-gray-900 dark:text-gray-300"
             >
               No
             </label>
@@ -507,11 +507,11 @@ export const TripDetails = ({
                   value="yes"
                   onChange={withGroupOrOrganizationChangeHandler}
                   name="withGroupOrOrganization-radio-group"
-                  className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  className="w-4 h-4 md:w-5 md:h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                 />
                 <label
                   htmlFor="group-organization-radio"
-                  className="ml-2 text-lg text-gray-900 dark:text-gray-300"
+                  className="ml-2 text-sm md:text-lg text-gray-900 dark:text-gray-300"
                 >
                   Yes
                 </label>
@@ -523,11 +523,11 @@ export const TripDetails = ({
                   value="no"
                   onChange={withGroupOrOrganizationChangeHandler}
                   name="withGroupOrOrganization-radio-group"
-                  className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  className="w-4 h-4 md:w-5 md:h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                 />
                 <label
                   htmlFor="group-organization-radio-2"
-                  className="ml-2 text-lg text-gray-900 dark:text-gray-300"
+                  className="ml-2 text-sm md:text-lg text-gray-900 dark:text-gray-300"
                 >
                   No
                 </label>
@@ -553,11 +553,11 @@ export const TripDetails = ({
               type="radio"
               value=""
               name="inline-radio-group"
-              className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              className="w-4 h-4 md:w-5 md:h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
             />
             <label
               htmlFor="inline-radio"
-              className="ml-2 text-lg font-medium text-gray-900 dark:text-gray-300"
+              className="ml-2 text-sm md:text-lg text-gray-900 dark:text-gray-300"
             >
               Yes
             </label>
@@ -568,11 +568,11 @@ export const TripDetails = ({
               type="radio"
               value=""
               name="inline-radio-group"
-              className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              className="w-4 h-4 md:w-5 md:h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
             />
             <label
               htmlFor="inline-2-radio"
-              className="ml-2 text-lg font-medium text-gray-900 dark:text-gray-300"
+              className="ml-2 text-sm md:text-lg text-gray-900 dark:text-gray-300"
             >
               No
             </label>
@@ -596,11 +596,11 @@ export const TripDetails = ({
               type="radio"
               value=""
               name="inline-radio-group"
-              className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              className="w-4 h-4 md:w-5 md:h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
             />
             <label
               htmlFor="inline-radio"
-              className="ml-2 text-lg font-medium text-gray-900 dark:text-gray-300"
+              className="ml-2 text-sm md:text-lg text-gray-900 dark:text-gray-300"
             >
               Yes
             </label>
@@ -611,11 +611,11 @@ export const TripDetails = ({
               type="radio"
               value=""
               name="inline-radio-group"
-              className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              className="w-4 h-4 md:w-5 md:h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
             />
             <label
               htmlFor="inline-2-radio"
-              className="ml-2 text-lg font-medium text-gray-900 dark:text-gray-300"
+              className="ml-2 text-sm md:text-lg text-gray-900 dark:text-gray-300"
             >
               No
             </label>
